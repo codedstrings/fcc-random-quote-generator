@@ -1,0 +1,113 @@
+:root {
+  /* Color Palette */
+  --primary-color: #667eea;
+  --secondary-color: #764ba2;
+  --accent-color: #1da1f2;
+  --accent-hover: #0d8bd9;
+  
+  /* Background */
+  --bg-gradient-start: #667eea;
+  --bg-gradient-end: #764ba2;
+  
+  /* Text Colors */
+  --text-primary: #2c3e50;
+  --text-secondary: #7f8c8d;
+  --text-white: white;
+  
+  /* Surface Colors */
+  --surface-primary: rgba(255, 255, 255, 0.95);
+  --shadow-light: rgba(0, 0, 0, 0.1);
+  --shadow-medium: rgba(0, 0, 0, 0.2);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Georgia', serif;
+  background: linear-gradient(135deg, var(--bg-gradient-start) 0%, var(--bg-gradient-end) 100%);
+  margin: 0;
+}
+
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100vw;
+  padding: 20px;
+}
+
+#quote-box {
+  background: var(--surface-primary);
+  backdrop-filter: blur(10px);
+  max-width: 600px;
+  padding: 50px 40px;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px var(--shadow-light);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+#quote-box:hover {
+  transform: translateY(-5px);
+}
+
+#text {
+  font-size: 1.8rem;
+  line-height: 1.6;
+  color: var(--text-primary);
+  margin-bottom: 20px;
+  font-style: italic;
+  min-height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#author {
+  font-size: 1.2rem;
+  color: var(--text-secondary);
+  margin-bottom: 30px;
+  font-weight: 600;
+}
+
+#new-quote {
+  background: var(--primary-color);
+  color: var(--text-white);
+  border: none;
+  padding: 12px 25px;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-right: 15px;
+  transition: all 0.3s ease;
+}
+
+#new-quote:hover {
+  background: var(--secondary-color);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px var(--shadow-medium);
+}
+
+#tweet-quote {
+  background: var(--accent-color);
+  color: var(--text-white);
+  text-decoration: none;
+  padding: 12px 25px;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+#tweet-quote:hover {
+  background: var(--accent-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px var(--shadow-medium);
+}
