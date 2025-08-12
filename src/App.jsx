@@ -11,10 +11,10 @@ function App() {
   const fetchQuotesCache = async () => {
     setIsLoading(true);
     try {
-      const response = await fetch('https://api.allorigins.win/get?url=' + encodeURIComponent('https://zenquotes.io/api/quotes'));
-      const result = await response.json();
-      const data = JSON.parse(result.contents);
-      
+      const quotesUrl = 'https://zenquotes.io/api/quotes';
+      // Use a CORS proxy to avoid CORS issues
+      const response = await fetch('https://cors-anywhere.com/' + quotesUrl);
+      const data = await response.json();
       console.log('Fetched quotes cache:', data.length, 'quotes');
       
       // Store quotes in cache
