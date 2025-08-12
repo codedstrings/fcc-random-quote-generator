@@ -1,12 +1,52 @@
-# React + Vite
+# Random Quote Machine
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive random quote generator built with React as part of the FreeCodeCamp Frontend Libraries certification.
 
-Currently, two official plugins are available:
+## Features
+- Display random inspirational quotes
+- One-click quote refreshing
+- Direct Twitter sharing integration
+- Cached quotes for fast performance
+- Modern, animated UI
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Tech Stack
+- **React** with Hooks (useState, useEffect)
+- **Vite** for development and bundling
+- **CSS Custom Properties** for theming
+- **ZenQuotes API** for quote data
+- **CORS Proxy** for cross-origin requests
 
-## Expanding the ESLint configuration
+## API & Services Used
+- **ZenQuotes API**: [https://zenquotes.io/](https://zenquotes.io/) - Free quote API (rate limited)
+- **CORS Anywhere**: [https://cors-anywhere.com/](https://cors-anywhere.com/) - CORS proxy for API access
+  
+List of other CORS proxies for reference: https://gist.github.com/reynaldichernando/eab9c4e31e30677f176dc9eb732963ef
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Local Development
+
+```bash
+# Clone repository
+git clone <repo-url>
+cd fcc-random-quote-machine
+
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+```
+
+## Deployment
+Deployed on GitHub Pages. The app caches 50 quotes on load and cycles through them locally to avoid API rate limits.
+
+## Architecture Notes
+- **Quote Caching**: Fetches multiple quotes at startup, stores locally
+- **Random Selection**: Picks random quote from cache instead of sequential
+- **Fallback System**: Uses hardcoded quotes if API fails
+- **CORS Handling**: Uses proxy to bypass browser CORS restrictions
+
+## Live Demo
+[View Live Project](https://codedstrings.github.io/fcc-random-quote-generator/)
+
+---
+*Built for FreeCodeCamp Frontend Libraries Certification*
