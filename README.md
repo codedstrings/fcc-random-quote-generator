@@ -26,8 +26,8 @@ List of other CORS proxies for reference: https://gist.github.com/reynaldicherna
 
 ```bash
 # Clone repository
-git clone <repo-url>
-cd fcc-random-quote-machine
+git clone https://github.com/codedstrings/fcc-random-quote-generator.git
+cd fcc-random-quote-generator
 
 # Install dependencies
 npm install
